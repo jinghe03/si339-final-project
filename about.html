@@ -1,0 +1,75 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="css/gallery.css"> -->
+    <!-- Link to Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Fixed Header with Banner -->
+    <header class="banner">
+        <!-- Expandable Menu Button -->
+        <button id="menu-toggle" class="menu-button">☰ Menu</button>
+        <h1>More About Me!</h1>
+    </header>
+
+    <!-- Side Navigation Menu (hidden by default) -->
+    <nav id="side-menu" class="side-menu hidden">
+        <ul>
+            <li><a href="index.html">My Restaurant Guide</a></li>
+            <li><a href="about.html" class="active">More About Me</a></li>
+            <!-- <li><a href="gallery.html">Where I've Been</a></li> -->
+        </ul>
+    </nav>
+
+    <nav id="section-menu">
+        <ul>
+            <li><a href="#about">Who Am I?</a></li>
+            <li><a href="#q-and-a">Q&A</a></li>
+        </ul>
+    </nav>
+
+    <section id="about"></section>
+        <div class="content">
+            <div class="text">
+                <h2>More About Me</h2>
+                <div class="image-container">
+                    <img src="images/me.jpg" alt="Photo of me at restaurant" class="shake-on-load">
+                </div>
+                <p>As a Senior at the University of Michigan, I look fondly back at the times
+                    where I had the opportunity to explore Ann Arbor's diverse culinary scenes on
+                    and off campus. From dining out with loved ones -- whether that be friends'
+                    birthday celebrations, girls' night out, parents weekend, and more -- I have
+                    cultivated a deep appreciation for food, culture, and dining experiences,
+                    which I share through these recommendations and personal reviews! </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="q-and-a">
+        <div class="q-and-a">
+            <h2>Get to Know Me!</h2>
+            <!-- Using JavaScript to populate this portion -->
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Jing's 2024 Ann Arbor Restaurant Guide</p>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
+
+    </body>
+</html>
