@@ -19,33 +19,33 @@
 .restaurant {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
-    justify-content: space-between; /* Space out elements vertically */
+    justify-content: space-between;
     text-align: center;
     border: 2px solid var(--secondary-color); /* Border for better visualization */
     background-color: var(--light-background);
     padding: 2rem;
     height: 100%; /* Ensure restaurants take full available height */
     animation: bounce 1s ease-out forwards;
+    font-family: "Roboto", sans-serif;
 }
 
 .restaurant img {
     width: 100%; /* Ensure the image fills the width of the container */
     height: 200px; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    margin-top: .5rem; /* Add space above the image */
+    border-radius: 8px;
+    margin-top: .5rem;
 }
 
 .summary {
     font-size: 1rem; /* Smaller font size */
     color: var(--secondary-color); /* Light gray text for better readability */
     margin-top: 0.3rem; /* Space between image and text */
-    /* line-height: 1; */
 }
 
 .restaurant-name {
     font-size: 1.2rem; /* Make the name bigger */
     font-weight: bold; /* Make the name bold */
-    color: var(--secondary-color); /* Keeps the name black for emphasis */
+    color: var(--secondary-color);
 }
 
 
@@ -111,6 +111,7 @@
     margin-top: 70px; /* Space from top & between sections */
     text-align: center; /* Center the content */
     padding: 20px 0;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Base style for floating icons (hearts, parents, friends) */
@@ -174,11 +175,6 @@
     }
 }
 
-
-
-
-
-
 @media (min-width: 768px) {
     .restaurant-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
@@ -191,17 +187,55 @@
 
 }
 
-
-
-
-
 @media (min-width: 1500px) {
     .restaurant-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-        grid-column-gap: 2rem; /* Adds gap between columns */
+        grid-column-gap: 2rem;
     }
 
     .summary {
-        font-size: .95rem; /* Smaller font size */
+        font-size: .95rem;
+    }
+}
+
+
+
+
+
+/* Additional rules for dark mode */
+@media (prefers-color-scheme: dark) {
+
+    h2,
+    a,
+    p {
+        color: var(--primary-color)
+    }
+
+    #parents,
+    #dates,
+    #friends {
+        background-color: var(--secondary-color);
+    }
+
+    .summary {
+        color: var(--primary-color);
+    }
+
+    .restaurant{
+        background-color: var(--dark-background);
+    }
+
+    .restaurant-name {
+        color: var(--primary-color);
+    }
+
+    .card-front,
+    .card-back {
+        background-color: var(--dark-background);
+    }
+
+    /* Adjust Font Awesome icons white */
+    .fas {
+        color: var(--other-background);
     }
 }

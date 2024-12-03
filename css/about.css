@@ -38,6 +38,7 @@
     font-weight: bold;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .text p {
@@ -110,6 +111,7 @@
     font-weight: bold;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
 }
 .q-item {
     margin-bottom: 1.5rem;
@@ -152,4 +154,38 @@
     display: none; /* Hidden by default */
     font-size: 1rem;
     line-height: 1.5;
+}
+
+
+
+
+
+/* Additional rules for dark mode */
+@media (prefers-color-scheme: dark) {
+    .content {
+        background-color: var(--dark-background);
+    }
+
+    .text {
+        background-color: darkslategray;
+    }
+
+    .text h2, .text p,
+    .q-and-a h2 {
+        color: var(--primary-color);
+    }
+
+    .q-header {
+        background-color: darkslategrey;
+        color: var(--primary-color);
+    }
+
+    .q-content {
+        background-color: rgb(50, 63, 27);
+        color: var(--primary-color);
+    }
+
+    .q-header:hover {
+        background-color: rgb(164, 55, 16);
+    }
 }
