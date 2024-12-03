@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define the Q&A data directly in the script
     const qAndAData = [
         {
-            question: "What makes you qualified to review restaurants?",
-            answer: "As a senior at the University of Michigan, I’ve explored a wide range of restaurants on and off campus. My experiences cover diverse cuisines, price points, and dining atmospheres, enabling me to provide well-rounded recommendations for every occasion."
+            question: "Why did you create this site?",
+            answer: "As a senior at the University of Michigan, I’ve explored a wide range of restaurants on and off campus with my friends and family. I love exploring diverse cuisines, price points, and dining atmospheres, and wanted to create a page where someone can easily pinpoint a couple of trendy and on theme places to take their loved ones!"
         },
         {
             question: "What type of food do you usually review?",
-            answer: "I review all types of food! Whether you're looking for quick bites, fine dining, or vegan-friendly options, my reviews focus on providing options that suit different tastes and preferences."
+            answer: "I love all types of foods, and have a couple of favorites in mind for every occasion. Whether you're looking for quick bites, fine dining, or vegan-friendly options, my reviews focus on providing options that suit different tastes and preferences."
         },
         {
             question: "How do you rate restaurants?",
