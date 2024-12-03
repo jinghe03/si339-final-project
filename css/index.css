@@ -184,7 +184,6 @@
     .summary {
         font-size: .9rem; /* Smaller font size */
     }
-
 }
 
 @media (min-width: 1024px) {
@@ -204,7 +203,6 @@
 
 /* Additional rules for dark mode */
 @media (prefers-color-scheme: dark) {
-
     h2,
     a,
     p {
