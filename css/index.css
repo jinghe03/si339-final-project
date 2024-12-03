@@ -1,0 +1,198 @@
+/* Restaurant grid styling*/
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One column by default on mobile */
+    grid-row-gap: 4rem; /* Adds gap between rows */
+    margin: 1rem 0; /* Adds vertical margin for spacing */
+    padding-left: 20px; /* Add space between the left edge of the grid container and the items */
+    padding-right: 20px; /* Add space between the right edge of the grid container and the items */
+}
+
+ /* Animation for bouncy restaurant */
+@keyframes bounce {
+    0% { transform: translateY(-300px); }
+    60% { transform: translateY(30px); }
+    80% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space out elements vertically */
+    text-align: center;
+    border: 2px solid var(--secondary-color); /* Border for better visualization */
+    background-color: var(--light-background);
+    padding: 2rem;
+    height: 100%; /* Ensure restaurants take full available height */
+    animation: bounce 1s ease-out forwards;
+}
+
+.restaurant img {
+    width: 100%; /* Ensure the image fills the width of the container */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: .5rem; /* Add space above the image */
+}
+
+.summary {
+    font-size: 1rem; /* Smaller font size */
+    color: var(--secondary-color); /* Light gray text for better readability */
+    margin-top: 0.3rem; /* Space between image and text */
+    /* line-height: 1; */
+}
+
+.restaurant-name {
+    font-size: 1.2rem; /* Make the name bigger */
+    font-weight: bold; /* Make the name bold */
+    color: #000; /* Keeps the name black for emphasis */
+}
+
+
+
+
+
+/* Flip-able cards styling */
+.card {
+    width: 100%;
+    height: 400px; /* Set a fixed height for the cards */
+    position: relative;
+    transform-style: preserve-3d; /* Makes sure that the card maintains its 3D structure */
+    transition: transform 0.6s ease; /* Smooth flip transition */
+}
+
+/* Front side of the card */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Front side of the card */
+.card-front {
+    background-color: var(--primary-color); /* Front side background color */
+    flex-direction: column; /* Stack image and text vertically */
+}
+
+.card-front img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Back side of the card */
+.card-back {
+    background-color: var(--primary-color); /* Back side background color */
+    transform: rotateY(180deg); /* Rotate the back side to hide it initially */
+    font-size: 0.9rem;
+}
+
+/* Flip the card when hovered */
+.restaurant:hover .card {
+    transform: rotateY(180deg); /* Flip the card */
+}
+
+
+
+
+
+/* Style for the section container */
+#parents, #dates, #friends {
+    position: relative;
+    margin-top: 70px; /* Space from top & between sections */
+    text-align: center; /* Center the content */
+    padding: 20px 0;
+}
+
+/* Base style for floating icons (hearts, parents, friends) */
+.floating {
+    font-size: 30px;
+    position: absolute;
+    opacity: 0;
+    animation: floatingIcons 5s ease-in-out infinite;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    z-index: 1;
+}
+
+.parents, .hearts, .friends {
+    font-size: 30px;
+    position: absolute;
+    opacity: 0;
+    animation: floatingIcons 5s ease-in-out infinite;
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%);
+}
+
+/* Randomly position hearts using animation delay */
+.floating:nth-child(1) {
+    animation-delay: 0s;
+    left: -150px;
+}
+
+.floating:nth-child(2) {
+    animation-delay: 1s;
+    left: 0px;
+}
+
+.floating:nth-child(3) {
+    animation-delay: 2s;
+    left: 150px;
+}
+
+
+/* Floating hearts animation */
+@keyframes floatingIcons {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-75px);
+    }
+    75% {
+        opacity: 0.6;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
+        grid-column-gap: 2rem; /* Adds gap between columns */
+    }
+}
+
+
+
+
+
+@media (min-width: 1050px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(4, 1fr); /* 3 columns for larger screens */
+        grid-column-gap: 2rem; /* Adds gap between columns */
+    }
+}

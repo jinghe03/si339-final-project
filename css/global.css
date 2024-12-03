@@ -1,0 +1,300 @@
+:root {
+    --primary-color: #ffffff; /* White */
+    --secondary-color: #14213D; /* Dark navy blue */
+    --text-color: #000000;
+
+    --hover-background: rgba(0, 0, 0, 0.698);
+    --dark-background: #020122; /* Dark Blue */
+    --light-background: #e5e5e5; /* Light gray */
+    --other-background: #ff6739;
+    --light-qa: #c1b9f2;
+    --light-qa2: #c7ebff;
+
+    --table-border-color: #aaa; /* Darker gray for clearer borders */
+
+    --link-color: #005fc5;
+    --link-color-active: #014a00;
+    --hover-color: #004299;
+    --menu-text-color: #001120;
+    --menu-background: #ecececf3;
+}
+
+
+
+
+
+/* Skip style */
+.skip-link {
+    position: absolute;
+    top: -100000px;
+    right: 10px;
+    background-color: var(--light-background);
+    color: var(--secondary-color);
+    padding: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 5px;
+    transition: top 0.3s ease;
+}
+
+/* Make the skip link visible when focused */
+.skip-link:focus {
+    top: 20px;
+    outline: none;
+}
+
+
+
+
+
+/* Fixed banner */
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--light-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.banner h1 {
+    font-size: 1rem;
+    text-align: center; /* Center horizontally */
+    color: var(--text-color);
+}
+
+
+
+
+
+/* Expandable menu */
+.menu-button {
+    position: absolute;
+    left: .8vw;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus,
+.menu-button:focus,
+a:focus {
+    outline: 1px solid var(--link-color);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Side menu styling, hidden by default */
+.side-menu {
+    position: fixed;
+    top: 50px; /* Below the banner */
+    left: 0;
+    width: 35vw;
+    background: var(--primary-color);
+    list-style-type: none;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 5;
+}
+
+.side-menu.show {
+    transform: translateX(0); /* Slide in menu */
+}
+
+/* Bring menu on-screen */
+.side-menu:not(.hidden) {
+    transform: translateX(0); /* Ensure this class aligns with the "show" class */
+    left: 0; /* Align properly */
+}
+
+/* Menu item styles */
+.side-menu li {
+    list-style: none;
+}
+
+.side-menu li a {
+    color: var(--secondary-color); /* Side menu text color */
+    text-decoration: none;
+    display: block;
+    font-size: .75rem;  /* Side menu text size */
+}
+
+.side-menu ul li a {
+    font-size: .75rem;  /* Side menu item text size */
+}
+
+.side-menu li a:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* Style the side menu button */
+#menu-toggle {
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    font-size: .75rem;
+    cursor: pointer;
+    z-index: 20;
+}
+
+
+
+
+
+/* Sections nav items styling */
+#section-menu {
+    position: sticky;
+    top: 5vh; /* Space below the banner */
+    width: 100%;
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 10px 0;
+    z-index: 1;
+}
+
+#section-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+}
+
+#section-menu ul li {
+    margin: 0 2vw; /* Space between menu items */
+}
+
+#section-menu ul li a {
+    text-decoration: none;
+    color: var(--other-background); /* Link color */
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#section-menu ul li a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Slight hover effect */
+}
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: var(--dark-background);
+    color: var(--primary-color);
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+
+/* Keyframes for animating the underline */
+@keyframes slideInUnderline {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Styles for active links */
+#section-menu ul li a.active {
+    background: var(--other-background); /* Active link color */
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-decoration-style: wavy; /* Squiggly underline */
+    text-decoration-thickness: 2px; /* Thickness of the underline */
+}
+
+/* Styling the underline */
+#section-menu ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--other-background); /* Color of the underline */
+    border-radius: 2px;
+    animation: slideInUnderline 0.3s ease-out forwards;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+    /* Fixed banner */
+    .banner h1 {
+        font-size: 1.25rem;
+        text-align: center; /* Center horizontally */
+        color: var(--text-color);
+    }
+
+    .side-menu ul li a {
+        font-size: .9rem;
+    }
+
+    /* Menu Button */
+    .menu-button {
+        left: 2vw; /* Adjust button position */
+    }
+
+    /* Section Menu */
+    #section-menu ul {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: center; /* Center align */
+    }
+
+    #section-menu ul li {
+        margin: 0 1.5vw; /* Less space between menu items */
+    }
+
+    #section-menu ul li a {
+        font-size: 0.85rem; /* Adjust text size */
+    }
+
+    /* Bigger button text size */
+    #menu-toggle {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 1050px) {
+    /* Fixed banner */
+    .banner h1 {
+        font-size: 2rem;
+        text-align: center; /* Center horizontally */
+        color: var(--text-color);
+    }
+
+    .side-menu ul li a {
+        font-size: 1rem;  /* Side menu item size */
+    }
+
+    /* Bigger button text size */
+    #menu-toggle {
+        font-size: 1.25rem;
+    }
+
+    /* Section Menu */
+    #section-menu ul li {
+        margin: 0 2vw; /* Increase spacing for larger screens */
+    }
+
+    #section-menu ul li a {
+        font-size: 0.95rem; /* Slightly larger text size */
+    }
+}
