@@ -19,9 +19,18 @@
 }
 
 /* Text styling */
+/* Ensure the text is in its own container below the image */
 .text {
-    text-align: center; /* Center the text on small screens */
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--light-qa);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text h2 {
@@ -33,6 +42,7 @@
 }
 
 .text p {
+    margin-top: 1.5rem; /* Add space above the text */
     font-size: 1rem;
     line-height: 1.6;
     color: var(--dark-background);

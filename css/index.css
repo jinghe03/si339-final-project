@@ -184,15 +184,24 @@
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
         grid-column-gap: 2rem; /* Adds gap between columns */
     }
+
+    .summary {
+        font-size: .9rem; /* Smaller font size */
+    }
+
 }
 
 
 
 
 
-@media (min-width: 1050px) {
+@media (min-width: 1500px) {
     .restaurant-grid {
-        grid-template-columns: repeat(4, 1fr); /* 3 columns for larger screens */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
         grid-column-gap: 2rem; /* Adds gap between columns */
+    }
+
+    .summary {
+        font-size: .95rem; /* Smaller font size */
     }
 }
