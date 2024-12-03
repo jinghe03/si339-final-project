@@ -269,7 +269,7 @@ a:focus {
     }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1024px) {
     /* Fixed banner */
     .banner h1 {
         font-size: 1.5rem;
