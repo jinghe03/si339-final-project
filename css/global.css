@@ -2,13 +2,29 @@
     --primary-color: #ffffff; /* White */
     --secondary-color: #14213D; /* Dark navy blue */
     --text-color: #000000;
-
     --hover-background: rgba(0, 0, 0, 0.698);
     --dark-background: #020122; /* Dark Blue */
     --light-background: #e5e5e5; /* Light gray */
     --other-background: #ff6739;
     --light-qa: #e1ddff;
     --light-qa2: #c7ebff;
+}
+
+
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #14213D;
+        --secondary-color: #ffffff;
+        --hover-background: rgba(123, 78, 78, 0.3);
+        --text-color: #eeeeee;
+        --dark-background: #7a7a7a;
+        --light-background: #515151;
+        --other-background: #88371e;
+        --light-qa: #414048;
+        --light-qa2: #576770;
+    }
 }
 
 
@@ -290,3 +306,16 @@ a:focus {
         font-size: 0.95rem; /* Slightly larger text size */
     }
 }
+
+
+/* Disable all transitions */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+
+
