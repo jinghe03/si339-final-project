@@ -45,7 +45,7 @@
 .restaurant-name {
     font-size: 1.2rem; /* Make the name bigger */
     font-weight: bold; /* Make the name bold */
-    color: #000; /* Keeps the name black for emphasis */
+    color: var(--secondary-color); /* Keeps the name black for emphasis */
 }
 
 
