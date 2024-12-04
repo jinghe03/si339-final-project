@@ -46,6 +46,8 @@
     font-size: 1rem;
     line-height: 1.6;
     color: var(--dark-background);
+    font-family: "Roboto", sans-serif;
+
 }
 
 
@@ -139,6 +141,7 @@
 .q-header h3 {
     margin: 0;
     font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .q-header i {
@@ -154,6 +157,7 @@
     display: none; /* Hidden by default */
     font-size: 1rem;
     line-height: 1.5;
+    font-family: "Roboto", sans-serif;
 }
 
 
